@@ -1,0 +1,45 @@
+# Redis configuration
+spring.data.redis.host=localhost
+spring.data.redis.port=6379
+spring.data.redis.password= 
+spring.data.redis.database=0
+spring.session.redis.namespace=spring:session
+
+spring.data.redis.repositories.enabled=false
+
+# Cache configuration
+spring.cache.type=REDIS
+spring.cache.cache-names=customerCache
+
+# Other application settings
+server.port=8080
+logging.level.root=info
+
+# JWT configuration
+jwt.secret=yourSecretKey
+jwt.expiration=86400
+
+spring.sql.init.mode=always
+spring.sql.init.platform=h2
+
+# MongoDB configuration
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+
+spring.session.store-type=mongodb
+spring.data.mongodb.uri=mongodb://localhost/mySessionDB
+
+
+eureka.instance.preferIpAddress = true 
+eureka.client.registerWithEureka = true
+eureka.client.fetchRegistry = true
+eureka.client.serviceUrl.defaultZone = http://localhost:8070/eureka/
+
+## Configuring info endpoint
+info.app.name=miniCommerce
+info.app.description=Mini Commerce Application
+info.app.version=1.0.0
+management.info.env.enabled = true
+
+endpoints.shutdown.enabled=true
+management.endpoint.shutdown.enabled=true
